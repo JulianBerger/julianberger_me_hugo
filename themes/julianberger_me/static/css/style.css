@@ -1,9 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body, html {
   height: 100%;
 }
 
 body {
-  font-family: 'Open Sans', 'Inconsolata', 'Helvetica Neue', sans-serif;
+  font-family: 'Lato', 'Inconsolata', 'Helvetica Neue', sans-serif;
   position: relative;
   color: #4c4c4c;
   font-size: 17px;
@@ -16,6 +20,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 5fr 2fr;
 }
 
 /*Hide scrollbars*/
@@ -27,8 +32,28 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.85em;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 1.45em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
 .header {
-  grid-column: span 12;
+  grid-column: 2 / span 10;
   position: relative;
   display: table;
   vertical-align: baseline;
@@ -36,7 +61,7 @@ a {
   height: 90px;
   border: 0;
   margin: 0;
-  padding: 0;
+  padding-top: 10vh;
 }
 
 .header>div {
@@ -50,20 +75,47 @@ a {
   margin: auto;
 }
 
+.header nav {
+  align-items: center!important;
+  display: flex!important;
+}
+
+.header ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex!important;
+  padding: 0;
+}
+
+.header nav li {
+  list-style: none!important;
+  display: flex!important;
+  margin-right: 0.5em;
+  text-transform: uppercase;
+}
+
+.header nav li .navlink {
+  font-weight: 800;
+  font-size: 0.8em;
+  color: #707070;
+}
+
+.header nav li .navlink.active {
+  color: #000000;
+}
+
 .content {
   grid-column: 2 / span 10;
-  min-height: 100px;
   color: #7d7d7d;
   font-size: 14px;
   line-height: 24px;
-  padding: 90px 0 50px;
+  padding: 3vh 0 6vh;
   font-weight: 500;
   text-align: left;
 }
 
 .footer {
   grid-column: span 12;
-  min-height: 100px;
   background: #ededed;
   color: #7d7d7d;
   font-size: 14px;

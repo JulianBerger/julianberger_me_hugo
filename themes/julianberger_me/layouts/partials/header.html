@@ -1,13 +1,43 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <title>{{ .Title }} - {{ .Site.BaseURL }}</title>
-    <link rel="canonical" href="{{ .Permalink }}">
-    {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}
-    <link rel="stylesheet" href="/css/style.css">
 
-    {{ range .Site.Params.cdn_css }}
-      <link rel="stylesheet" href="{{ . }}" />
-    {{ end }}
-    
+<head>
+  <title>{{ .Title }} - {{ .Site.BaseURL }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}
+  <link rel="stylesheet" href="/css/style.css">
+
+  {{ range .Site.Params.cdn_css }}
+  <link rel="stylesheet" href="{{ . }}" />
+  {{ end }}
+
 </head>
+
+<body>
+  <div class="header">
+    <nav role="navigation">
+      <ul class="" role="navigation">
+        <li>
+          <a class="navlink active" data-hotkey="h" aria-label="Home" href="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a class="navlink" data-hotkey="p" aria-label="My latest Projects" href="/projects">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a class="navlink" data-hotkey="p h" aria-label="Photography" href="/photo">
+            Photo
+          </a>
+        </li>
+        <li>
+          <a class="navlink" data-hotkey="c" aria-label="Contact" href="/contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
