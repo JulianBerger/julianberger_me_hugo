@@ -14,30 +14,34 @@
 
 </head>
 
-<body>
+<body id="body">
+  <nav id="fullscreenNav" class="hide" role="navigation">
+    <div class="backdrop">
+      <a class="txt-btn" onclick="toggleFullscreenNav()"><i class="fa fa-close"></i></a>
+      <ul class="" role="navigation">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            <li>
+                <a class="navlink {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" data-hotkey="h" aria-label="{{.Name}}" href="{{.URL}}">
+                  <span>{{ .Title }}</span>
+                </a>
+              </li>
+          {{ end }}
+      </ul>
+    </div>
+  </nav>
   <div class="header">
     <nav role="navigation">
-      <ul class="" role="navigation">
-        <li>
-          <a class="navlink active" data-hotkey="h" aria-label="Home" href="/">
-            Home
-          </a>
-        </li>
-        <li>
-          <a class="navlink" data-hotkey="p" aria-label="My latest Projects" href="/projects">
-            Projects
-          </a>
-        </li>
-        <li>
-          <a class="navlink" data-hotkey="p h" aria-label="Photography" href="/photo">
-            Photo
-          </a>
-        </li>
-        <li>
-          <a class="navlink" data-hotkey="c" aria-label="Contact" href="/contact">
-            Contact
-          </a>
-        </li>
+      <ul id="fixedNav" class="" role="navigation">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            <li>
+                <a class="navlink {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" data-hotkey="h" aria-label="{{.Name}}" href="{{.URL}}">
+                  <span>{{ .Title }}</span>
+                </a>
+              </li>
+          {{ end }}
       </ul>
+      <a class="txt-btn" id='fullscreenNavBtn' onclick="toggleFullscreenNav()"><i class="fa fa-bars"></i></a>
     </nav>
   </div>

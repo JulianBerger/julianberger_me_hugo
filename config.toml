@@ -11,3 +11,38 @@ theme = "julianberger_me"
 [params]
   cdn_css = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", "https://fonts.googleapis.com/css?family=Lato"]
   cdn_js = ["",]
+
+[[menu.main]]
+  identifier = "home"
+  name = "Go Home"
+  title = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "projects"
+  name = "My latest projects"
+  title = "Projects"
+  url = "/projects/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "photo"
+  name = "Photography"
+  title = "Photo"
+  url = "https://julianberger.photos"
+  weight = 3
+
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact me"
+  title = "Contact"
+  url = "/contact/"
+  weight = 4
+
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact me"
+  title = "Contact"
+  url = "/contact/"
+  weight = 5
