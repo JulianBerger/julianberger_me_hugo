@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{ .Title }} - {{ .Site.BaseURL }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}
+    <link rel="stylesheet" href="/css/style.css">
+
+    {{ range .Site.Params.cdn_css }}
+      <link rel="stylesheet" href="{{ . }}" />
+    {{ end }}
+    
+</head>

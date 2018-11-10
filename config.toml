@@ -1,3 +1,13 @@
-baseURL = "http://example.org/"
+baseURL = "https://julianberger.me/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Julian Berger"
+theme = "julianberger_me"
+
+[social]
+  github = "https://github.com/JulianBerger/"
+  instagram = "https://www.instagram.com/julianbgr/"
+  mail = "hi@julianberger.me"
+
+[params]
+  cdn_css = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",]
+  cdn_js = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",]

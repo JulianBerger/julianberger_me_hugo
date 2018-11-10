@@ -5,14 +5,14 @@ name = "Julianberger_me"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
 description = ""
-homepage = "http://example.com/"
+homepage = "https://julianberger.me/"
 tags = []
 features = []
 min_version = "0.41"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Julian Berger"
+  homepage = "https://julianberger.me/"
 
 # If porting an existing theme
 [original]

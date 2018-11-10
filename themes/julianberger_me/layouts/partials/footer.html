@@ -1,0 +1,29 @@
+<footer id="footer">
+  <div class="wrapper">
+    <div class="footer-social">
+      <a class="social-icon" target="_blank" href="{{.Site.Social.github}}">
+        <i class="fa fa-github"></i>
+      </a>
+      <a class="social-icon" target="_blank" href="{{.Site.Social.instagram}}">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a class="social-icon" href="mailto:{{.Site.Social.mail}}">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+    <div class="footer-copyright">
+      <span>
+        Copyright © 2018 - build with
+        <a href="https://github.com/gohugoio/hugo">hugo</a> by Julian Berger
+        
+      </span>
+    </div>
+  </div>
+</footer>
+
+{{ range .Site.Params.cdn_js }}
+  <script type="text/javascript" src="{{ . }}"></script>
+{{ end }}
+
+</body>
+</html>
