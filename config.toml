@@ -9,5 +9,5 @@ theme = "julianberger_me"
   mail = "hi@julianberger.me"
 
 [params]
-  cdn_css = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",]
-  cdn_js = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",]
+  cdn_css = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", "https://fonts.googleapis.com/css?family=Open+Sans"]
+  cdn_js = ["",]
