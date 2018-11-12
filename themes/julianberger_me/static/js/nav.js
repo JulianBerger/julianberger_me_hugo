@@ -1,4 +1,4 @@
-const navThreshold = 310;
+const navThreshold = 365;
 
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
@@ -12,7 +12,7 @@ ready(function () {
   handleNavigation();
 });
 
-window.onresize = function(event) {
+window.onresize = function (event) {
   handleNavigation();
 };
 
@@ -24,7 +24,7 @@ function handleNavigation() {
   let fixedNav = document.getElementById('fixedNav');
   let fullscreenNavBtn = document.getElementById('fullscreenNavBtn');
 
-  if(bodyWidth < navThreshold) {
+  if (bodyWidth < navThreshold) {
     // fullscreen nav
     fixedNav.classList.add('hide');
     fullscreenNavBtn.classList.remove('hide');
@@ -39,12 +39,12 @@ function toggleFullscreenNav() {
   let fullscreenNav = document.getElementById('fullscreenNav');
   let backdrop = document.getElementsByClassName('backdrop')[0];
 
-  if(fullscreenNav.classList.contains('hide')) {
+  if (fullscreenNav.classList.contains('hide')) {
     // open
-  fullscreenNav.classList.remove('hide');
-  backdrop.classList.add('show');
-} else {
-  // close
+    fullscreenNav.classList.remove('hide');
+    backdrop.classList.add('show');
+  } else {
+    // close
     backdrop.classList.remove('show');
     fullscreenNav.classList.add('hide');
   }

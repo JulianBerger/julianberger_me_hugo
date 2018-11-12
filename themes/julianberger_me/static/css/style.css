@@ -224,3 +224,44 @@ h4 {
   width: auto;
   margin-left: 10px;
 }
+
+.project-list {
+
+}
+
+.project-list li {
+  list-style: none !important;
+  text-align: center;
+}
+
+.project-list .item {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-radius: 20px;
+  margin: auto;
+  width: 100%;
+  padding-top: 36.25%;
+  max-width: 560px;
+}
+
+.project-list h3 {
+  font-size: 1.7em;
+  color: #7d7d7d;
+}
+
+.mail-bg {
+  display: inline-block;
+  background-color: #d6d6d6;
+  height: 5px;
+  transition: height 0.15s ease-in;
+}
+
+.mail-bg:hover {
+  height: calc(0.5em + 1.5vw);
+}
+
+.mail-bg a {
+  font-size: calc(1em + 3vw);
+  color: #000000;
+}

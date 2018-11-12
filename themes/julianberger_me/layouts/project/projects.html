@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+
+<div class="content">
+  {{ .Content }}
+
+  <ul class="project-list">
+    {{ range (where .Site.RegularPages ".Type" "project") }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <h3>{{ .Title }}</h3>
+        <div class="item" style="background-image: url('/projects/{{ .Params.img }}')">
+        </div>
+      </a>
+      <div class="post-header">
+        
+      </div>
+
+    </li>
+    {{ end }}
+  </ul>
+
+</div>
+
+{{ partial "footer.html" . }}

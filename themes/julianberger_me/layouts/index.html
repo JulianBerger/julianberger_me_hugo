@@ -1,8 +1,9 @@
 {{ partial "header.html" . }}
 
   <div class="content">
-    <h2>👋 Hi! I'm Julian Berger... </h2>
-    <h4>... a freelance Developer from Berlin, Germany 🇩🇪</h4>
+    {{ with .Site.GetPage "/" }}
+      {{ .Content }}
+    {{end}}
   </div>
 
   {{ partial "footer.html" . }}

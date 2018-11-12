@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+  <div class="content">
+    {{ with .Site.GetPage "/contact" }}
+      {{ .Content }}
+
+      <div class="mail-bg">
+          <a href="mailto:{{.Site.Social.mail}}">{{ .Site.Social.mail }}</a>
+        </div>
+
+    {{end}}
+  </div>
+
+  {{ partial "footer.html" . }}
