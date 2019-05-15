@@ -1,0 +1,8 @@
+{{ range (where .Site.RegularPages ".Type" "project") }}
+<div class="small-project">
+  <a class="small-project-info" href="{{ .Permalink }}">
+    <h3 class="title">{{ .Title }}</h3>
+    <aside><time datetime="{{ .Date }}">{{ .Date.Format "Jan 2006" }}</time></aside>
+  </a>
+</div>
+{{ end }}

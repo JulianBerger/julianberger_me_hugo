@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<section class="content">
+  <div class="cv">
+    {{ with .Site.GetPage "/cv" }}
+    {{ .Content }}
+
+
+    {{end}}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

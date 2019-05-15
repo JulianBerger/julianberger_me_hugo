@@ -1,6 +1,11 @@
 {{ partial "header.html" . }}
 
 <div class="content">
+  <h2>{{ .Title }}</h2>
+  <a href="{{ .Params.projecturl }}" target="_blank" rel="noopener noreferrer">
+    <div class="project-header-image" style="background-image: url('/projects/{{ .Params.img }}')">
+    </div>
+  </a>
   {{ .Content }}
 </div>
 

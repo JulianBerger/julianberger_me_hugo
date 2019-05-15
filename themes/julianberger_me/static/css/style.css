@@ -43,16 +43,17 @@ body {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 h1 {
   font-size: 2em;
-  font-weight: 200;
+  font-weight: 800;
 }
 
 h2 {
   font-size: 1.85em;
-  font-weight: 200;
+  font-weight: 800;
 }
 
 h3 {
@@ -227,9 +228,7 @@ h4 {
   margin-left: 10px;
 }
 
-.project-list {
-
-}
+.project-list {}
 
 .project-list li {
   list-style: none !important;
@@ -254,6 +253,18 @@ h4 {
   padding: 12px 0;
 }
 
+
+.project-header-image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 560px;
+  height: 30vw;
+  max-height: 200px;
+  margin: 30px auto;
+}
+
 .mail-bg {
   display: inline-block;
   background-color: #d6d6d6;
@@ -268,4 +279,74 @@ h4 {
 .mail-bg a {
   font-size: calc(1em + 3vw);
   color: #000000;
+}
+
+/* CV / About */
+.cv {
+  text-align: center;
+  max-width: 520px;
+  margin: auto;
+}
+
+.cv h2 {
+  color: #333;
+  text-align: center;
+}
+
+.cv h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.cv h4 {
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.cv p {
+  margin-bottom: 30px;
+}
+
+.cv ul {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.cv li {
+text-align: left;
+}
+
+.avatar-round img {
+  width: 80%;
+  height: 80%;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+
+.small-project {
+  margin-bottom: 20px;
+}
+
+.small-project-info {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.small-project-info h3 {
+  color: #333;
+  display: flex;
+  margin: 0;
+}
+
+.small-project-info aside {
+  display: flex;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .4);
+  text-align: right;
+  transition: all ease-in-out .2s;
 }
