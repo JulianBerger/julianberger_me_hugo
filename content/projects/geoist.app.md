@@ -6,4 +6,4 @@ description: "Keep track of where you’ve been in the World"
 img: "geoist.png"
 ---
 
-## Geoist
+## [Geoist.app](https://geoist.app)
