@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body,
@@ -232,22 +234,24 @@ h4 {
 .project-list li {
   list-style: none !important;
   text-align: center;
+  padding: 20px 0;
 }
 
 .project-list .item {
   background-position: center;
   background-size: cover;
-  width: 100%;
   border-radius: 20px;
   margin: auto;
   width: 100%;
-  padding-top: 36.25%;
   max-width: 560px;
+  height: 30vw;
+  max-height: 200px;
 }
 
 .project-list h3 {
   font-size: 1.7em;
   color: #7d7d7d;
+  padding: 12px 0;
 }
 
 .mail-bg {

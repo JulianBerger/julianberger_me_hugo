@@ -26,12 +26,12 @@ theme = "julianberger_me"
   url = "/projects/"
   weight = 2
 
-[[menu.main]]
-  identifier = "photo"
-  name = "Photography"
-  title = "Photo"
-  url = "https://julianberger.photos"
-  weight = 3
+#[[menu.main]]
+#  identifier = "photo"
+#  name = "Photography"
+#  title = "Photo"
+#  url = "https://julianberger.photos"
+#  weight = 3
 
 [[menu.main]]
   identifier = "contact"
