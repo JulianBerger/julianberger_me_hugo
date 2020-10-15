@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://julianberger.me/projects/geoist.app/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/projects/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/projects/shutter.cc/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/projects/coffeemonkey/</loc>
+    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/projects/skygarage/</loc>
+    <lastmod>2017-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://julianberger.me/tags/</loc>
+  </url>
+  
+</urlset>
