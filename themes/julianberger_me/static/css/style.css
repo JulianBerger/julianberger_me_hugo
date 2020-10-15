@@ -311,6 +311,7 @@ h4 {
 .cv h3 {
   color: #333;
   margin-bottom: 15px;
+  margin-top: 35px;
 }
 
 .cv h4 {
@@ -347,6 +348,17 @@ text-align: left;
   height: 100%;
   border-radius: 50%;
   animation: fadein 2s;
+}
+
+.github-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86px;
+}
+
+.github-chart img {
+  width: 100%;
 }
 
 .small-project {

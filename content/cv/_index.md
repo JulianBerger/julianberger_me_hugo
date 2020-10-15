@@ -25,6 +25,9 @@ In my spare time I work as a freelance Software Developer.
 ### Projects
 {{<cv-project-list>}}
 
+### Git Activity
+{{< figure src="https://ghchart.rshah.org/7d7d7d/julianberger" alt="julianberger Github Chart" class="github-chart" link="https://github.com/JulianBerger" >}}
+
 &nbsp;
 
 &nbsp;
