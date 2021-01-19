@@ -19,7 +19,6 @@ In my spare time I work as a freelance Software Developer.
 * MongoDB / MySQL
 * Multiplatform App Development with Flutter
 * Firebase
-* Hugo
 * Continuous Integration and Deployement
 
 ### Projects
