@@ -4,7 +4,7 @@
   {{ .Content }}
 
   <ul class="project-list">
-    {{ range (where .Site.RegularPages ".Type" "project") }}
+    {{ range (where .Site.RegularPages ".Type" "project").ByDate.Reverse }}
     <li>
       <a href="{{ .Params.projecturl }}">
         <h3>{{ .Title }}</h3>
