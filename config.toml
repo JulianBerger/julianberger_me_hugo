@@ -3,14 +3,13 @@ languageCode = "en-us"
 title = "Julian Berger"
 theme = "julianberger_me"
 
-[social]
-  github = "https://github.com/JulianBerger/"
-  instagram = "https://www.instagram.com/julianbgr/"
-  mail = "hi@julianberger.me"
-
 [params]
   cdn_css = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", "https://fonts.googleapis.com/css?family=Lato"]
   cdn_js = ["",]
+  [params.Social]
+    github = "https://github.com/JulianBerger/"
+    instagram = "https://www.instagram.com/julianbgr/"
+    mail = "hi@julianberger.me"
 
 [[menu.main]]
   identifier = "home"
@@ -18,13 +17,6 @@ theme = "julianberger_me"
   title = "Home"
   url = "/"
   weight = 1
-
-[[menu.main]]
-  identifier = "about"
-  name = "About Me"
-  title = "About"
-  url = "/about/"
-  weight = 2
 
 #[[menu.main]]
 #  identifier = "projects"
@@ -53,3 +45,4 @@ theme = "julianberger_me"
   title = "Contact"
   url = "/contact/"
   weight = 5
+

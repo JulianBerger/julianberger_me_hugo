@@ -1,9 +1,13 @@
 {{ partial "header.html" . }}
 
-  <div class="content fadein-2s">
-    {{ with .Site.GetPage "/" }}
-      {{ .Content }}
-    {{end}}
+<div class="content fadein-2s cv">
+  <div class="mail-bg">
+    <a href="mailto:{{.Site.Params.Social.mail}}"
+      >{{ .Site.Params.Social.mail }}</a
+    >
   </div>
 
-  {{ partial "footer.html" . }}
+  {{ with .Site.GetPage "/" }} {{ .Content }} {{end}}
+</div>
+
+{{ partial "footer.html" . }}

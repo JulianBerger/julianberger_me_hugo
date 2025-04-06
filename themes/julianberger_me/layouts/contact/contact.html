@@ -1,14 +1,15 @@
 {{ partial "header.html" . }}
 
-  <div class="content contact fadein-2s">
-    {{ with .Site.GetPage "/contact" }}
-      {{ .Content }}
+<div class="content contact fadein-2s">
+  {{ with .Site.GetPage "/contact" }} {{ .Content }}
 
-      <div class="mail-bg">
-          <a href="mailto:{{.Site.Social.mail}}">{{ .Site.Social.mail }}</a>
-        </div>
-
-    {{end}}
+  <div class="mail-bg">
+    <a href="mailto:{{.Site.Params.Social.mail}}"
+      >{{ .Site.Params.Social.mail }}</a
+    >
   </div>
 
-  {{ partial "footer.html" . }}
+  {{end}}
+</div>
+
+{{ partial "footer.html" . }}
