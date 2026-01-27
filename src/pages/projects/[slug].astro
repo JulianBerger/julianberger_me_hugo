@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../components/Layout/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content, data } = await project.render();
+
+// Check if data exists before destructuring
+const title = data?.title ?? "Untitled Project";
+const date = data?.date;
+const img = data?.img;
+const projecturl = data?.projecturl ?? "#";
+const description = data?.description ?? "";
+
+const formatDate = (date: string) => {
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+};
+---
+
+<BaseLayout title={title} currentPage={`/projects/${project.slug}/`}>
+  <main class="content text-[#7d7d7d] text-[14px] leading-[24px] py-[3vh_0_6vh] font-medium text-left min-h-[calc(100svh-195px)] h-fit mx-auto max-w-[83.33%]">
+    <div class="animate-fadeIn">
+      <h1 class="text-[2em] font-extrabold text-[#333] mb-4">{title}</h1>
+      
+      {date && (
+        <time class="text-[#7d7d7d] font-medium mb-6 block" datetime={date}>
+          {formatDate(date)}
+        </time>
+      )}
+
+      {img && (
+        <div
+          class="project-header-image bg-center bg-cover rounded-[20px] w-full max-w-[560px] h-[30vw] max-h-[200px] mx-auto my-8"
+          style={`background-image: url('/projects/${img}')`}
+        />
+      )}
+
+      <div class="cv prose max-w-none">
+        <Content />
+      </div>
+
+      {projecturl && projecturl !== "#" && (
+        <a
+          href={projecturl}
+          class="inline-block mt-8 px-6 py-3 bg-[#333] text-white rounded-lg hover:bg-[#555] transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Project
+        </a>
+      )}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-out;
+  }
+
+  .prose :global(h1) {
+    font-size: 2em;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .prose :global(h2) {
+    font-size: 1.25em;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 0.75rem;
+  }
+  
+  .prose :global(p) {
+    margin-bottom: 1rem;
+  }
+  
+  .prose :global(a) {
+    color: #333;
+    text-decoration: underline;
+  }
+  
+  .prose :global(a:hover) {
+    color: #555;
+  }
+</style>

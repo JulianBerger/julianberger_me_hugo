@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../components/Layout/BaseLayout.astro";
+import { projects } from "../../data/projects";
+---
+
+<BaseLayout title="Projects" currentPage="/projects/">
+  <main class="content text-[#7d7d7d] text-[14px] leading-[24px] py-[3vh_0_6vh] font-medium text-left min-h-[calc(100svh-195px)] h-fit mx-auto max-w-[83.33%]">
+    <div class="animate-fadeIn">
+      <h1 class="text-[2em] font-extrabold text-[#333] mb-8">Latest projects</h1>
+
+      <ul class="project-list">
+        {projects.map((project) => (
+          <li class="list-none text-center py-5">
+            <a href={project.projecturl}>
+              <h3 class="text-[1.7em] text-[#7d7d7d] py-3">{project.title}</h3>
+              <div
+                class={`item bg-center bg-cover rounded-[20px] mx-auto w-full max-w-[560px] h-[30vw] max-h-[200px] ${project.img ? '' : 'bg-gray-200'}`}
+                style={project.img ? `background-image: url('/projects/${project.img}')` : undefined}
+              />
+            </a>
+            <div class="post-header"></div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-out;
+  }
+</style>

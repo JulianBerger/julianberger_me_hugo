@@ -1,0 +1,57 @@
+---
+const socialLinks = {
+  github: "https://github.com/JulianBerger/",
+  instagram: "https://www.instagram.com/julianbgr/",
+  email: "mailto:hi@julianberger.me",
+};
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer bg-[#ededed] text-[#7d7d7d] text-[14px] leading-[24px] py-[90px_0_50px] font-medium text-center">
+  <div class="max-w-[1296px] mx-auto relative">
+    <div class="mb-8">
+      <a
+        class="social-icon text-[1.65rem] text-[#7d7d7d] mx-[10px] hover:text-[#5f5f5f]"
+        target="_blank"
+        href={socialLinks.github}
+        aria-label="GitHub"
+      >
+        <i class="fa fa-github"></i>
+      </a>
+      <a
+        class="social-icon text-[1.65rem] text-[#7d7d7d] mx-[10px] hover:text-[#5f5f5f]"
+        target="_blank"
+        href={socialLinks.instagram}
+        aria-label="Instagram"
+      >
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a
+        class="social-icon text-[1.65rem] text-[#7d7d7d] mx-[10px] hover:text-[#5f5f5f]"
+        href={socialLinks.email}
+        aria-label="Email"
+      >
+        <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+    <div class="text-[0.75rem] mb-4 px-[3rem] font-normal animate-fadeIn">
+      <span>Copyright © 2018-{currentYear}</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-out;
+  }
+</style>

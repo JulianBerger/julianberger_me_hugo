@@ -1,0 +1,100 @@
+---
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = "" } = Astro.props;
+
+const navItems = [
+  { name: "Go Home", title: "Home", url: "/" },
+  { name: "Contact me", title: "Contact", url: "/contact/" },
+];
+
+const isActive = (url: string) => {
+  if (url === "/" && currentPage === "/") return true;
+  if (url !== "/" && currentPage.startsWith(url.replace(/\/$/, ""))) return true;
+  return false;
+};
+---
+
+<nav id="fullscreenNav" class="fixed inset-0 z-10 flex items-center justify-center text-center hidden">
+  <div class="backdrop absolute inset-0 bg-black opacity-0 transition-opacity duration-400" id="navBackdrop"></div>
+  <a class="txt-btn pt-[10vh] pb-[1vw] text-[#fbfbfb] block cursor-pointer" id="closeNavBtn">
+    <i class="fa fa-close"></i>
+  </a>
+  <ul class="pt-[2vh] relative z-10">
+    {navItems.map((item) => (
+      <li class="list-none mr-[0.5em] uppercase">
+        <a
+          class={`navlink font-bold text-[0.8em] ${
+            isActive(item.url) ? "text-white" : "text-[#7d7d7d]"
+          }`}
+          aria-label={item.name}
+          href={item.url}
+        >
+          <span>{item.title}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<div class="md:hidden fixed top-0 right-0 z-20 p-4">
+  <button id="openNavBtn" class="txt-btn text-[#333]">
+    <i class="fa fa-bars"></i>
+  </button>
+</div>
+
+<header class="hidden md:flex relative py-[10vh]">
+  <div class="flex items-center">
+    <nav class="flex items-center">
+      <ul class="flex p-0 m-0">
+        {navItems.map((item) => (
+          <li class="list-none mr-[0.5em] uppercase">
+            <a
+              class={`navlink font-bold text-[0.8em] ${
+                isActive(item.url) ? "text-black" : "text-[#707070]"
+              }`}
+              aria-label={item.name}
+              href={item.url}
+            >
+              <span>{item.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const fullscreenNav = document.getElementById("fullscreenNav");
+  const navBackdrop = document.getElementById("navBackdrop");
+  const openNavBtn = document.getElementById("openNavBtn");
+  const closeNavBtn = document.getElementById("closeNavBtn");
+
+  function toggleFullscreenNav() {
+    if (fullscreenNav?.classList.contains("hidden")) {
+      // Open nav
+      fullscreenNav?.classList.remove("hidden");
+      navBackdrop?.classList.add("show", "opacity-100");
+      navBackdrop?.classList.remove("opacity-0");
+    } else {
+      // Close nav
+      navBackdrop?.classList.remove("show", "opacity-100");
+      navBackdrop?.classList.add("opacity-0");
+      setTimeout(() => {
+        fullscreenNav?.classList.add("hidden");
+      }, 400);
+    }
+  }
+
+  openNavBtn?.addEventListener("click", toggleFullscreenNav);
+  closeNavBtn?.addEventListener("click", toggleFullscreenNav);
+</script>
+
+<style>
+  .backdrop.show {
+    transition: opacity 400ms ease-in;
+  }
+</style>
